@@ -28,5 +28,14 @@ public class MainLapangan {
             System.out.print(jumlah_mahasiswa1[i].GetNama_mahasiswa()+" ");
             System.out.println(jumlah_mahasiswa1[i].GetJarak(2*panjang_lap + 2*lebar_lap));
         }
+        double Tercepat=0;
+        String nama_mahasiswa = "";
+        for (int i = 0; i < jumlah_mahasiswa; i++) {
+            if (jumlah_mahasiswa1[i].GetPemenang()>Tercepat) {
+                Tercepat = jumlah_mahasiswa1[i].GetPemenang();
+                nama_mahasiswa = jumlah_mahasiswa1[i].GetNama_mahasiswa();
+            }
+        }
+        System.out.println(nama_mahasiswa);
     }
 }
